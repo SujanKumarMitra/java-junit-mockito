@@ -3,7 +3,6 @@ package org.example.javajunitmockito.mocking;
 import org.example.javajunitmockito.dao.BookDao;
 import org.example.javajunitmockito.model.Book;
 import org.example.javajunitmockito.model.BookBuilder;
-import org.example.javajunitmockito.service.BookService;
 import org.example.javajunitmockito.service.BookServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,7 @@ public class MockAnnotationTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.initMocks(this);
+        MockitoAnnotations.initMocks(this); // perform initialization and injections
     }
 
     @Test
