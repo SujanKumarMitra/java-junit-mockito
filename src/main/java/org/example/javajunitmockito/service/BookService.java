@@ -1,10 +1,18 @@
 package org.example.javajunitmockito.service;
 
+import org.example.javajunitmockito.dao.BookDao;
 import org.example.javajunitmockito.exception.BookAlreadyExistsException;
 import org.example.javajunitmockito.exception.BookNotFoundException;
 import org.example.javajunitmockito.model.Book;
 
 public interface BookService {
+
+
+    /**
+     * setter method for dependency injection
+     * @param bookDao the dao to set
+     */
+    void setBookDao(BookDao bookDao);
 
     /**
      * @param book the book to save

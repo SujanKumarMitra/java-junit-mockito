@@ -19,11 +19,10 @@ public interface BookDao {
     Optional<Book> getBookByISBN(String ISBN);
 
     /**
-     * @param ISBN the isbn of book to update
-     * @param book the book to update, also updates the isbn
+     * @param book the book to update
      * @return previously saved book, or {@code null} if no book found
      */
-    Book updateBook(String ISBN, Book book);
+    Book updateBook(Book book);
 
     /**
      * @param ISBN the isbn of book to delete

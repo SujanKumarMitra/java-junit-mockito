@@ -31,12 +31,8 @@ public class InMemoryBookDao implements BookDao {
     }
 
     @Override
-    public Book updateBook(String ISBN, Book book) {
-        Book dbBook = bookMap.getOrDefault(ISBN, null);
-        if (dbBook == null)
-            return null;
-        bookMap.put(ISBN, book);
-        return dbBook;
+    public Book updateBook(Book book) {
+        return bookMap.replace(book.getISBN(), book);
     }
 
     @Override

@@ -22,6 +22,7 @@ public class BookServiceImpl implements BookService {
         this.bookDao = bookDao;
     }
 
+    @Override
     public void setBookDao(BookDao bookDao) {
         Objects.requireNonNull(bookDao);
         this.bookDao = bookDao;
@@ -46,7 +47,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book updateBook(Book book) throws BookNotFoundException {
-        Book previousBook = bookDao.updateBook(book.getISBN(), book);
+        Book previousBook = bookDao.updateBook(book);
         if (previousBook == null)
             throw getBookNotFoundException(book.getISBN());
         return previousBook;
