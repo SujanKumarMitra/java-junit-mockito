@@ -1,5 +1,6 @@
 package org.example.javajunitmockito.mocking;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.mockito.exceptions.base.MockitoException;
@@ -17,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *     <li>{@link Object#equals(Object)} and {@link Object#hashCode()}</li>
  * </ul>
  */
-public class MockitoLimitationsExampleTest {
+class MockitoLimitationsExampleTest {
 
     static class ClassWithStaticMethod {
         public static int generateInt() {
