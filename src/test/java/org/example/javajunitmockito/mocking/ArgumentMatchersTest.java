@@ -4,9 +4,7 @@ import org.example.javajunitmockito.dao.BookDao;
 import org.example.javajunitmockito.exception.BookNotFoundException;
 import org.example.javajunitmockito.service.BookService;
 import org.example.javajunitmockito.service.BookServiceImpl;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 
