@@ -7,7 +7,7 @@ import static java.util.Arrays.asList;
 
 public class BookBuilder {
 
-    public final BookImpl book;
+    protected final BookImpl book;
 
     protected BookBuilder(BookImpl book) {
         this.book = book;
