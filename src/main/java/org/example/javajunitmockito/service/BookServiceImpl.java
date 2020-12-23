@@ -5,6 +5,7 @@ import org.example.javajunitmockito.exception.BookAlreadyExistsException;
 import org.example.javajunitmockito.exception.BookNotFoundException;
 import org.example.javajunitmockito.model.Book;
 
+import java.util.Objects;
 import java.util.Optional;
 
 import static java.text.MessageFormat.format;
@@ -13,11 +14,16 @@ public class BookServiceImpl implements BookService {
 
     protected BookDao bookDao;
 
+    public BookServiceImpl() {
+    }
+
     public BookServiceImpl(BookDao bookDao) {
+        Objects.requireNonNull(bookDao);
         this.bookDao = bookDao;
     }
 
     public void setBookDao(BookDao bookDao) {
+        Objects.requireNonNull(bookDao);
         this.bookDao = bookDao;
     }
 
