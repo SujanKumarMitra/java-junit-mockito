@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *     <li>{@link Object#equals(Object)} and {@link Object#hashCode()}</li>
  * </ul>
  */
-public class MockitoLimitationsExample {
+public class MockitoLimitationsExampleTest {
 
     static class ClassWithStaticMethod {
         public static int generateInt() {
@@ -55,8 +55,6 @@ public class MockitoLimitationsExample {
 
         final class FinalClass {
         }
-
-        assertNotNull(new FinalClass());
 
         MockitoException mockitoException = assertThrows(
                 MockitoException.class, () ->

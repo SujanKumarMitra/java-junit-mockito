@@ -11,7 +11,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BasicMockingExample {
+class BasicMockingExampleTest {
 
     @Test
     void testMockObjectShouldNotBeNull() {
